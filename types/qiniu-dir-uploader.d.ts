@@ -1,7 +1,7 @@
 import qiu from 'qiniu'
 import log4js from 'log4js'
 
-interface UploadOption {
+export interface UploadOption {
   /**
    * 空间名
    */
@@ -53,3 +53,5 @@ export class QiniuDirUploader{
   readDir(callback:ReaddirCallback):void;
   upload():void;
 }
+
+export function getUploader(conf:UploadOption):QiniuDirUploader

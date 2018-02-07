@@ -17,9 +17,8 @@ publish.js
 ```js
 var path=require('path');
 var qiniu=require('qiniu');
-var QiniuDirUploader=require('qiniu-dir-uploader');
-
-var uploader=new QiniuDirUploader({
+var qdu=require('qiniu-dir-uploader');
+var option={
   secretKey:'secretKey',
   accessKey:'accessKey',
   bucket:'bucket',
@@ -28,8 +27,13 @@ var uploader=new QiniuDirUploader({
   publishAssetsRoot:'root',
   loggerCategory:'upload',
   zone:qiniu.zone.Zone_z0
-});
+};
 
+var uploader=qdu.getUploader(option);
+//or
+var uploader=new qdu.QiniuDirUploader(option);
+
+//start upload
 uploader.upload();
 ```
 
@@ -53,7 +57,7 @@ yarn run pub
 
 ## 参数说明
 
-七牛相关参数说明，请看七牛文档：https://developer.qiniu.com/kodo/sdk/1289/nodejs
+七牛相关参数的详细说明，[请看七牛文档](https://developer.qiniu.com/kodo/sdk/1289/nodejs)
 
 ```ts
 interface UploadOption {
