@@ -1,6 +1,6 @@
 {
   "name": "qiniu-dir-uploader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A directory uploader for Qiniu",
   "main": "./lib/qiniu-dir-uploader.js",
   "repository": "git@github.com:parox2014/qiniu-dir-uploader.git",

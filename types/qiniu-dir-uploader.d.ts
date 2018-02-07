@@ -29,14 +29,14 @@ interface UploadOption {
   publishAssetsRoot: string;
 
   /**
-   * log4js category
+   * log4js category，默认:upload
    */
-  loggerCategory: string;
+  loggerCategory?: string;
 
   /**
-   * 机房位置
+   * 机房位置，默认华东
    */
-  zone:string;
+  zone?:string;
 }
 
 interface ReaddirCallback{
