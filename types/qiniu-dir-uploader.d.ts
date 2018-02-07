@@ -1,5 +1,4 @@
 import qiu from 'qiniu'
-import log4js from 'log4js'
 
 export interface UploadOption {
   /**
@@ -47,7 +46,6 @@ export class QiniuDirUploader{
   config:UploadOption;
   uploadToken:string;
   formUploader:qiu.form_up.FormUploader;
-  logger:log4js;
   constructor(option:UploadOption);
   uploadFile(key:string,localFile:string):void;
   readDir(callback:ReaddirCallback):void;
