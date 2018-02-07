@@ -53,6 +53,8 @@ yarn run pub
 
 ## 参数说明
 
+七牛相关参数说明，请看七牛文档：https://developer.qiniu.com/kodo/sdk/1289/nodejs
+
 ```ts
 interface UploadOption {
   /**
