@@ -1,12 +1,13 @@
 # qiniu-dir-uploader
 
-A dirctory uploader for Qiniu.
+A directory uploader for Qiniu.
 上传一个文件夹中的所有文件到七牛，并保持目录结构
 
 ## 安装
 
 ```bash
   yarn add qiniu-dir-uploader -D
+  #or
   npm i qiniu-dir-uploader --save-dev
 ```
 
