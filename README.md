@@ -32,7 +32,8 @@ var option={
   refresh:true,
   prefetch:2,
   https:true,
-  host:'cdn.qiniu.com'
+  host:'cdn.qiniu.com',
+    keep:false
 };
 
 var uploader=QiniuDirUploader.getUploader(option);
@@ -47,7 +48,7 @@ package.json
 
 ```json
 {
-  scripts:{
+  "scripts":{
     "build": "node build.js",
     "postbuild": "node upload.js",
     "upload":"node upload.js"
@@ -127,6 +128,11 @@ interface UploadOption {
    * @default false
    */
   debugger?:boolean;
+    /**
+     * 上传时，是否保持目录结构，默认保持
+     * @default true
+     */
+  keep?:boolean;
 }
 
 ```

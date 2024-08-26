@@ -1,12 +1,17 @@
 {
   "name": "qiniu-dir-uploader",
-  "version": "1.2.1",
+  "version": "1.2.4",
   "description": "A directory uploader for Qiniu",
   "main": "./lib/qiniu-dir-uploader.js",
   "repository": "git@github.com:parox2014/qiniu-dir-uploader.git",
   "author": "William Du<parox2014@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "test": "node ./test.js",
+    "version": "mversion pa",
+    "postversion": "npm publish"
+  },
   "dependencies": {
     "qiniu": "^7.2.1",
     "signale": "latest"
@@ -21,5 +26,8 @@
     "lib",
     "types"
   ],
-  "typings": "./types/qiniu-dir-uploader.d.ts"
+  "typings": "./types/qiniu-dir-uploader.d.ts",
+  "devDependencies": {
+    "mversion": "^2.0.1"
+  }
 }

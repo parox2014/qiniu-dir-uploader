@@ -52,6 +52,10 @@ export interface UploadOption {
    * @default false
    */
   debugger?:boolean;
+  /**
+   * 是否保持目录结构
+   */
+  keep?:boolean;
 }
 
 declare module "upload-options"{
